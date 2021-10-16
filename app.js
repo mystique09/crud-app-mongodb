@@ -1,4 +1,3 @@
-const { Sequelize } = require('sequelize');
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -38,11 +37,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-// Option 2: Passing parameters separately (other dialects)
-const sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'postgres' /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-}).authenticate().then(success => console.log(`Connected to database!`)).catch(error => console.log(`Cannot connect to database!`));
 
 module.exports = app;
