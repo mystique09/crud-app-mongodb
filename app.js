@@ -15,8 +15,8 @@ require('dotenv').config();
 const app = express();
 
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true })
-.then(success => console.log('Connected to database!'))
-.catch(error => console.log('Cannot connect to database!'));
+.then(success => console.log('🎉 Connected to database!'))
+.catch(error => console.log('❌ Cannot connect to database!'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
 app.use('/auth', authRouter);
 
 // catch 404 and forward to error handler

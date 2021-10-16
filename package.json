@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "debug": "set DEBUG=crud-app-backend:* & yarn start"
+    "debug": "set DEBUG=crud-app-backend:* & yarn start",
+    "debug:linux": "DEBUG=crud-app-backend:* & yarn start",
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,6 +21,8 @@
   "devDependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
-    "jsonwebtoken": "^8.5.1"
+    "jest": "^27.2.5",
+    "jsonwebtoken": "^8.5.1",
+    "supertest": "^6.1.6"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "./",
+    "checkJs": true,
+    "paths": {
+      "@models/*": "models/*",
+      "@controllers/*": "controllers/*",
+      "@routes/*": "routes/*"
+    }
+  },
+  "exclude": ["node_modules"]
+}
